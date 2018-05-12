@@ -22,26 +22,26 @@ function GetToHitModifiers(XComGameState_Effect EffectState, XComGameState_Unit 
 	{
 		if (HitMod != 0)
 		{
-		HitModInfo.ModType = eHit_Success;
-		HitModInfo.Reason = FriendlyName;
-		HitModInfo.Value = HitMod;
-		ShotModifiers.AddItem(HitModInfo);
+			HitModInfo.ModType = eHit_Success;
+			HitModInfo.Reason = FriendlyName;
+			HitModInfo.Value = HitMod;
+			ShotModifiers.AddItem(HitModInfo);
 		}
 
 		if (CritMod != 0)
 		{
-		CritModInfo.ModType = eHit_Crit;
-		CritModInfo.Reason = FriendlyName;
-		CritModInfo.Value = CritMod;
-		ShotModifiers.AddItem(CritModInfo);
+			CritModInfo.ModType = eHit_Crit;
+			CritModInfo.Reason = FriendlyName;
+			CritModInfo.Value = CritMod;
+			ShotModifiers.AddItem(CritModInfo);
 		}
 
 		if (DodgeMod != 0)
 		{
-		DodgeModInfo.ModType = eHit_Graze;
-		DodgeModInfo.Reason = FriendlyName;
-		DodgeModInfo.Value = DodgeMod;
-		ShotModifiers.AddItem(DodgeModInfo);
+			DodgeModInfo.ModType = eHit_Graze;
+			DodgeModInfo.Reason = FriendlyName;
+			DodgeModInfo.Value = DodgeMod;
+			ShotModifiers.AddItem(DodgeModInfo);
 		}
 	}	
 }
@@ -137,39 +137,7 @@ function int GetExtraArmorPiercing(XComGameState_Effect EffectState, XComGameSta
 
 function bool CheckAutopsyAgainstTarget(XComGameState_Unit Target)
 {
-	local name	Enemy;
-
-	Enemy = Target.GetMyTemplate().CharacterGroupName;
-	
-	if (Enemy == 'Sectoid' && `XCOMHQ.IsTechResearched('AutopsySectoid'))
-		{return true;}
-
-	if (Enemy == 'Viper' && `XCOMHQ.IsTechResearched('AutopsyViper'))
-		{return true;}
-
-	if (Enemy == 'Muton' && `XCOMHQ.IsTechResearched('AutopsyMuton'))
-		{return true;}
-
-	if (Enemy == 'Berserker' && `XCOMHQ.IsTechResearched('AutopsyBerserker'))
-		{return true;}
-
-	if (Enemy == 'Archon' && `XCOMHQ.IsTechResearched('AutopsyArchon'))
-		{return true;}
-
-	if (Enemy == 'Faceless' && `XCOMHQ.IsTechResearched('AutopsyFaceless'))
-		{return true;}
-
-	if (Enemy == 'Chryssalid' && `XCOMHQ.IsTechResearched('AutopsyChryssalid'))
-		{return true;}
-
-	if (Enemy == 'AdventTrooper' || Enemy == 'AdventCaptain' || Enemy == 'AdventPsiWitch' || Enemy == 'AdventShieldBearer' || Enemy == 'AdventStunLancer' || Enemy == 'AdventPurifier' || Enemy == 'AdventPriest' || Enemy == 'AdventCounterOp')
-	{
-		if(`XCOMHQ.IsTechResearched('AutopsyAdventTrooper'))
-		{return true;}
-	}
-	
-	return false;
-
+	return class'AutopsyConfig'.static.HasAutopsied(Target, `XCOMHQ);
 }
 
 
