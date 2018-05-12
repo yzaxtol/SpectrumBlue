@@ -1,0 +1,37 @@
+;==================================
+;	Conventional Weapons
+;==================================
+
+[AssaultRifle_CV X2WeaponTemplate]
+TacticalText="<Bullet/> Medium Range: This weapon gains accuracy the closer they are to the target.\n"
+BriefSummary="Assault rifles are the standard armament for most operatives as it has no extreme strengths or weaknesses.  This Conventional variant has limited lethality but deals fairly consistent damage."
+AbilityDescName="assault rifle"
+
+[SniperRifle_CV X2WeaponTemplate]
+TacticalText="<Bullet/> Long Range: This weapon loses accuracy the closer they are to the target and when firing beyond the soldier's vision.\n"
+BriefSummary="Sniper rifles are considered the best weapon for engaging at long to extreme distances with their great precision. This Conventional variant has limited lethality but deals fairly consistent damage."
+AbilityDescName="sniper rifle"
+
+[Shotgun_CV X2WeaponTemplate]
+TacticalText="<Bullet/> Short Range: This weapon gains significant accuracy the closer they are to the target but suffers at long distances.\n"
+BriefSummary="Shotguns are the preferred weapon for close quarter combat due to its lethality at close ranges but suffers at long distances. This Conventional variant has limited lethality but deals fairly consistent damage."
+AbilityDescName="shotguns"
+
+[Cannon_CV X2WeaponTemplate]
+FriendlyName="Heavy Cannon"
+FriendlyNamePlural="Heavy Cannons"
+BriefSummary="The Heavy Cannons provide our troops a powerful but imprecise weapon great at providing support and destroying armor and cover. This Conventional variant has limited lethality but deals fairly consistent damage."
+TacticalText="Medium Range: This weapon gains accuracy the closer they are to the target.\n"
+AbilityDescName="heavy cannon"
+
+[SMG_CV X2WeaponTemplate]
+FriendlyName="Submachine Gun"
+FriendlyNamePlural="Submachine Guns"
+BriefSummary="These Submachine Guns provide our soldiers great mobility on the battlefield. This Conventional variant has limited lethality but deals fairly consistent damage."
+TacticalText="<Bullet/> Medium Range: This weapon gains accuracy the closer they are to the target.\n"
+AbilityDescName="smg"
+
+[Pistol_CV X2WeaponTemplate]
+TacticalText="<Bullet/> Medium: This weapon gains accuracy the closer they are to the target.\n"
+BriefSummary="Pistols are the standard sidearm for XCOM operatives allowing those with heavy weapon to still fire on the move. This Conventional variant has limited lethality but deals fairly consistent damage."
+AbilityDescName="pistol"

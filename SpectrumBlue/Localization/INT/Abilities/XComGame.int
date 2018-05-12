@@ -1,0 +1,25 @@
+;==================================
+;	Abilities
+;==================================
+
+;==================================
+;	Weapons
+;==================================
+
+;TODO: Integrate config values into text
+
+[Sniperrifle_Aim X2AbilityTemplate]
+LocFriendlyName="Scope In"
+LocLongDescription="Grants squadsight and +10 Aim and +15 Critical chance for this turn. Costs 1 action."
+LocHelpText="Grants squadsight and +10 Aim and +15 Critical chance for this turn. Costs 1 action."
+LocPromotionPopupText="<Bullet/>Grants squadsight and +10 Aim and +15 Critical chance for this turn. Costs 1 action.<br/>"
+
+;==================================
+;	Soldiers
+;==================================
+
+[SpectrumSniper_Bonus X2AbilityTemplate]
+LocFriendlyName="Sharpshooter"
+LocLongDescription="Sharpshooters deal 2 additional damage with critical strikes."
+LocHelpText="Sharpshooters deal 2 additional damage with critical strikes."
+LocPromotionPopupText="<Bullet/>Sharpshooters deal 2 additional damage with critical strikes.<br/>"

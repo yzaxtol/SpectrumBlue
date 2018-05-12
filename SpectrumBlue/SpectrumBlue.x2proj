@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>211dec45-9dd3-4d0f-a965-2b54a9dcd98d</Guid>
+    <Name>SpectrumBlue</Name>
+    <Description>Spectrum Blue incoming bitches.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>SpectrumBlue</AssemblyName>
+    <RootNamespace>SpectrumBlue</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Config\Missions" />
+    <Folder Include="Config\Characters" />
+    <Folder Include="Config\Weapons" />
+    <Folder Include="Config\Weapons\Conventional" />
+    <Folder Include="Config\Weapons\Melee" />
+    <Folder Include="Localization\" />
+    <Folder Include="Localization\INT" />
+    <Folder Include="Localization\INT\Abilities" />
+    <Folder Include="Localization\INT\Characters" />
+    <Folder Include="Localization\INT\Armor" />
+    <Folder Include="Localization\INT\DarkEvents" />
+    <Folder Include="Localization\INT\Items" />
+    <Folder Include="Localization\INT\Weapons" />
+    <Folder Include="Localization\INT\Techs" />
+    <Folder Include="Localization\INT\Weapons\Conventional" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\SpectrumBlue\" />
+    <Folder Include="Src\SpectrumBlue\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Weapons\Conventional\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Weapons\Melee\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComClassData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSpectrumAbilities.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\Abilities\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\Characters\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\Weapons\Conventional\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\SpectrumBlue\Classes\Abilities_Soldiers.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\Abilities_Weapons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\Effect_AutopsyBonus.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\Effect_BonusHit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\Weapons_Conventional_Mod.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\Weapons_Conventional_New.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\X2DownloadableContentInfo_SpectrumBlue.uc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
