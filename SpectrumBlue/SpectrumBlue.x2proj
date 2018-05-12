@@ -42,6 +42,9 @@
     <Content Include="Config\XComSpectrumAbilities.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Localization\INT\Abilities\SpectrumBlue.int">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\INT\Abilities\XComGame.int">
       <SubType>Content</SubType>
     </Content>
@@ -60,6 +63,9 @@
     <Content Include="Src\SpectrumBlue\Classes\Abilities_Soldiers.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\SpectrumBlue\Classes\Abilities_Tags.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\SpectrumBlue\Classes\Abilities_Weapons.uc">
       <SubType>Content</SubType>
     </Content>
@@ -67,6 +73,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\SpectrumBlue\Classes\Effect_BonusHit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\SpectrumText.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumBlue\Classes\UISpectrum.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\SpectrumBlue\Classes\Weapons_Conventional_Mod.uc">

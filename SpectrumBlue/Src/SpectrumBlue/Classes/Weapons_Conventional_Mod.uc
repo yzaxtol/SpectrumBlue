@@ -33,6 +33,9 @@ class Weapons_Conventional_Mod extends X2DownloadableContentInfo config(Spectrum
 				//Template.SetUIStatMarkup(class'SpectrumGreen.SpectrumLocalization'.default.EnviroDmgLabel,,  class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE);
 				
 				//Template.Tier = (class'SpectrumGreen.Weapons_New'.default.CONVENTIONAL_TIER + class'SpectrumGreen.Weapons_New'.default.ASR_TIER);
+								
+				Template.Abilities.AddItem('AssaultRifle_FireSupport');
+				Template.Abilities.AddItem('Suppression');
 
             }
 			}
@@ -51,7 +54,7 @@ class Weapons_Conventional_Mod extends X2DownloadableContentInfo config(Spectrum
 			
 				//Template.Tier = (class'SpectrumGreen.Weapons_New'.default.CONVENTIONAL_TIER + class'SpectrumGreen.Weapons_New'.default.SHT_TIER);
 
-				//Template.Abilities.AddItem('SMG_Mobility');
+				Template.Abilities.AddItem('Shotgun_Buckshot');
 
             }
 			}

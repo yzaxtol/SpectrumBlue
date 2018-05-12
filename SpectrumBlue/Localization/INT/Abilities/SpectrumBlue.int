@@ -1,0 +1,8 @@
+[SpectrumText]
+
+SquadsightFriendlyName="Squadsight"
+SquadsightLongDescription="You can target enemies within squadmates' sight, provided there is line of sight to the target for this turn."
+SquadsightHelpText="You can target enemies within squadmates' sight, provided there is line of sight to the target for this turn."
+SquadsightFlyOverText="Squadsight"
+
+ScopeInLongDesc="This soldier has gained +<Ability:SNIPERRIFLE_SCOPE_AIM/>% bonus Aim and +<Ability:SNIPERRIFLE_SCOPE_CRIT/>% bonus critical hit chance for this turn."

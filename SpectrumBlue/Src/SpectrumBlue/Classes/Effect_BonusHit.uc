@@ -5,6 +5,8 @@ var array<name> WeaponTechs;
 var array<name> WeaponCats;
 var array<name> AbilityNames;
 var array<name> EnemyCats;
+
+var bool bFailifArmored;
 var bool bFailIfFound;
 
 var int HitMod;
@@ -160,7 +162,7 @@ function int GetExtraArmorPiercing(XComGameState_Effect EffectState, XComGameSta
 
 function bool PerformAllChecks(X2WeaponTemplate Weapon, XComGameState_Ability AbilityState, XComGameState_Unit Target)
 {
-	local bool	bName, bTech, bCat, bAbility, bEnemy;
+	local bool	bName, bTech, bCat, bAbility, bEnemy, bArmor;
 
 	//Set all booleans to false and require them ALL to be switched to true through the checks for the effect to work.
 	bName = false;
@@ -168,6 +170,7 @@ function bool PerformAllChecks(X2WeaponTemplate Weapon, XComGameState_Ability Ab
 	bCat = false;
 	bAbility = false;
 	bEnemy = false;
+	bArmor = false;
 
 	//If anything is in the WeaponNames array make sure it matches with the weapon.
 	bName = WeaponNameCheck(Weapon); 
@@ -184,7 +187,10 @@ function bool PerformAllChecks(X2WeaponTemplate Weapon, XComGameState_Ability Ab
 	//If anything is in the EnemyCats array make sure it matches with the target.
 	bEnemy = EnemyCatCheck(Target); 
 
-	if (bName && bTech && bCat && bAbility && bEnemy)
+	//If bFailifArmored is true than the target must have no Armor currently.
+	bArmor = ArmorCheck(Target);
+
+	if (bName && bTech && bCat && bAbility && bEnemy && bArmor)
 		{return true;}
 
 	return false;
@@ -274,9 +280,28 @@ function bool EnemyCatCheck(XComGameState_Unit Target)
 	}
 }
 
+function bool ArmorCheck(XComGameState_Unit Target)
+{
+	local int ArmorValue;
+	
+	ArmorValue = Target.GetCurrentStat(eStat_ArmorMitigation) - Target.Shredded;
+
+	if(bFailifArmored == false) {return true;}
+	else 
+	{	
+		if (ArmorValue <= 0)
+		{
+			if(bFailIfFound) {return false;}
+			else			 {return true;}
+		}
+		
+	}
+}
+
 
 DefaultProperties
 {
 	DuplicateResponse = eDupe_Ignore
 	bFailIfFound = false
+	bFailifArmored = false
 }

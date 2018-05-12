@@ -6,13 +6,20 @@
 ;	Weapons
 ;==================================
 
-;TODO: Integrate config values into text
-
 [Sniperrifle_Aim X2AbilityTemplate]
 LocFriendlyName="Scope In"
-LocLongDescription="Grants squadsight and +10 Aim and +15 Critical chance for this turn. Costs 1 action."
-LocHelpText="Grants squadsight and +10 Aim and +15 Critical chance for this turn. Costs 1 action."
-LocPromotionPopupText="<Bullet/>Grants squadsight and +10 Aim and +15 Critical chance for this turn. Costs 1 action.<br/>"
+LocLongDescription="Grants squadsight and gain +<Ability:SNIPERRIFLE_SCOPE_AIM/>% bonus Aim and +<Ability:SNIPERRIFLE_SCOPE_CRIT/>% bonus critical hit chance for this turn. Costs 1 action."
+LocHelpText="Grants squadsight and gain +<Ability:SNIPERRIFLE_SCOPE_AIM/>% bonus Aim and +<Ability:SNIPERRIFLE_SCOPE_CRIT/>% bonus critical hit chance for this turn. Costs 1 action."
+
+[Shotgun_Buckshot X2AbilityTemplate]
+LocFriendlyName="Buckshot"
+LocLongDescription="Shotguns gain +<Ability:SHOTGUN_BUCKSHOT_CRIT/>% bonus critical hit chance when firing on targets with no armor."
+LocHelpText="Shotguns gain +<Ability:SHOTGUN_BUCKSHOT_CRIT/>% bonus critical hit chance when firing on targets with no armor."
+
+[AssaultRifle_FireSupport X2AbilityTemplate]
+LocFriendlyName="Fire Support"
+LocLongDescription="Assault Rifles are able to land critical hits on reaction shots."
+LocHelpText="Assault Rifles are able to land critical hits on reaction shots."
 
 ;==================================
 ;	Soldiers
