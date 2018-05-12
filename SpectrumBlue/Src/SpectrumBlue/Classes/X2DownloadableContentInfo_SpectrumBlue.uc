@@ -24,3 +24,8 @@ static event OnLoadedSavedGame()
 static event InstallNewCampaign(XComGameState StartState)
 {}
 
+
+static event OnPostTemplatesCreated()
+{
+	class'AutopsyConfig'.static.Validate();
+}
